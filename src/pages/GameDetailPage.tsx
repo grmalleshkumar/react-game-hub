@@ -11,7 +11,7 @@ const GameDetailPage = () => {
   console.log(slug);
   const { data: game, error, isLoading } = useGame(slug!);
 
-  if (isLoading) <Spinner />;
+  if (isLoading) return <Spinner />;
   if (!game) return null;
   if (error) throw error;
 
